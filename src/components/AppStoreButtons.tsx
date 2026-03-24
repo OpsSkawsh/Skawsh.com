@@ -13,7 +13,9 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
   size = 'default'
 }) => {
   const isSmall = size === 'small';
-  const badgeHeight = isSmall ? 40 : 56;
+  const appStoreBadgeHeight = isSmall ? 40 : 56;
+  // Google Play badge has ~20% built-in padding, so increase height to match visual size
+  const googlePlayBadgeHeight = isSmall ? 53 : 74;
 
   return (
     <div className={`flex ${isSmall ? 'flex-col sm:flex-row gap-2' : 'flex-col sm:flex-row gap-3 sm:gap-4'} ${className}`}>
