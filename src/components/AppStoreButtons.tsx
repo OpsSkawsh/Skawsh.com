@@ -13,7 +13,9 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
   size = 'default'
 }) => {
   const isSmall = size === 'small';
-  const badgeHeight = isSmall ? 40 : 56;
+  const appStoreBadgeHeight = isSmall ? 40 : 56;
+  // Google Play badge has ~20% built-in padding, so increase height to match visual size
+  const googlePlayBadgeHeight = isSmall ? 53 : 74;
 
   return (
     <div className={`flex ${isSmall ? 'flex-col sm:flex-row gap-2' : 'flex-col sm:flex-row gap-3 sm:gap-4'} ${className}`}>
@@ -27,7 +29,7 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
         <img
           src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
           alt="Download on the App Store"
-          style={{ height: `${badgeHeight}px`, width: 'auto' }}
+          style={{ height: `${appStoreBadgeHeight}px`, width: 'auto' }}
         />
       </a>
 
@@ -41,7 +43,7 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
         <img
           src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
           alt="Get it on Google Play"
-          style={{ height: `${badgeHeight}px`, width: 'auto' }}
+          style={{ height: `${googlePlayBadgeHeight}px`, width: 'auto' }}
         />
       </a>
     </div>
