@@ -1,16 +1,26 @@
 
-## Plan: Update App Store Button to Link to Live App Store URL
+## Plan: Replace Custom Buttons with Official Store Badge Images
 
 **What's changing:**
-The App Store button currently blocks navigation (showing a toast/tooltip saying "Releasing soon"). Since the app is now live on the App Store, the button should redirect users to the actual App Store listing.
+The current buttons use custom SVG icons + styled text. The user wants the official Google Play and App Store badge images — exactly as shown in the reference (the classic black pill-shaped official badges with the real logos).
 
-**Single file to edit:** `src/components/AppStoreButtons.tsx`
+**Approach:**
+Use the official badge images hosted by Google and Apple as `<img>` elements wrapped in `<a>` links. This is the standard implementation used on virtually every website. No custom Button component needed — just linked images with proper sizing.
 
-**Changes:**
-1. Add `APP_STORE_URL = "https://apps.apple.com/in/app/skawsh/id6757456162"` constant alongside the existing Google Play URL constant
-2. Remove the `handleAppStoreClick` function (which blocked navigation and showed the toast)
-3. Remove the `Tooltip`/`TooltipProvider`/`TooltipTrigger` wrapper — no longer needed
-4. Convert the App Store button to use `asChild` with an `<a>` tag (same pattern as the Google Play button), linking to the App Store URL with `target="_blank"`
-5. Remove unused imports: `useState`, `Tooltip*`, `toast`
+- **Google Play badge**: Official PNG from `https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png`
+- **App Store badge**: Official SVG/PNG from Apple's media services
 
-This change applies everywhere the `AppStoreButtons` component is used — Customer page, Business page, Footer, and Support page — all in one edit.
+**File to edit:** `src/components/AppStoreButtons.tsx`
+
+**Specific changes:**
+1. Remove the `Button` import and all custom-styled button markup
+2. Replace each button with a plain `<a>` tag containing an `<img>` of the official badge
+3. Keep the same `size` prop logic — `default` renders larger badges (height ~56px), `small` renders compact badges (height ~40px)
+4. Keep the same URLs (`APP_STORE_URL` and `GOOGLE_PLAY_URL`) and `target="_blank"` behavior
+5. Add `hover:opacity-80 transition-opacity` on the `<a>` tags for a subtle hover effect
+
+**Badge sources:**
+- Google Play: `https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png` (official Google-hosted)
+- App Store: `https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83` (official Apple-hosted)
+
+This is a single-file change that automatically updates all pages where `AppStoreButtons` is used (Customer, Business, Footer, Support).
