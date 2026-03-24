@@ -5,7 +5,7 @@ const steps = [
     icon: Smartphone,
     number: "1",
     title: "Place Order",
-    description: "Customer places order via Skawsh app or website"
+    description: "Customer places order via Skawsh app"
   },
   {
     icon: MapPin,
