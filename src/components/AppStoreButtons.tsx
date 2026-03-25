@@ -55,3 +55,5 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
 };
 
 export default AppStoreButtons;
+
+export default AppStoreButtons;
