@@ -13,37 +13,41 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
   size = 'default'
 }) => {
   const isSmall = size === 'small';
-  const appStoreBadgeHeight = isSmall ? 40 : 56;
-  // Google Play badge has ~20% built-in padding, so increase height to match visual size
-  const googlePlayBadgeHeight = isSmall ? 53 : 74;
+  // Use a single visual height for both badges; Google Play image has built-in padding
+  // so we crop it using a fixed-size container with overflow hidden to match App Store visually
+  const badgeHeight = isSmall ? 40 : 56;
+  // Google Play has ~23% vertical padding baked in, so render it taller to fill container
+  const gpHeight = Math.round(badgeHeight * 1.33);
 
   return (
-    <div className={`flex ${isSmall ? 'flex-col sm:flex-row gap-2' : 'flex-col sm:flex-row gap-3 sm:gap-4'} ${className}`}>
+    <div className={`flex items-center ${isSmall ? 'flex-col sm:flex-row gap-2' : 'flex-col sm:flex-row gap-3 sm:gap-4'} ${className}`}>
       {/* App Store Badge */}
       <a
         href={APP_STORE_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className="hover:opacity-80 transition-opacity inline-block"
+        className="hover:opacity-80 transition-opacity inline-flex items-center"
+        style={{ height: `${badgeHeight}px` }}
       >
         <img
           src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
           alt="Download on the App Store"
-          style={{ height: `${appStoreBadgeHeight}px`, width: 'auto' }}
+          style={{ height: `${badgeHeight}px`, width: 'auto', display: 'block' }}
         />
       </a>
 
-      {/* Google Play Badge */}
+      {/* Google Play Badge — rendered taller then clipped to match visual height */}
       <a
         href={GOOGLE_PLAY_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className="hover:opacity-80 transition-opacity inline-block"
+        className="hover:opacity-80 transition-opacity inline-flex items-center overflow-hidden"
+        style={{ height: `${badgeHeight}px` }}
       >
         <img
           src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
           alt="Get it on Google Play"
-          style={{ height: `${googlePlayBadgeHeight}px`, width: 'auto' }}
+          style={{ height: `${gpHeight}px`, width: 'auto', display: 'block', marginTop: `-${Math.round((gpHeight - badgeHeight) / 2)}px` }}
         />
       </a>
     </div>
