@@ -17,34 +17,30 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
   const isSmall = size === 'small';
   const badgeHeight = isSmall ? 40 : 52;
 
+  const imgStyle: React.CSSProperties = {
+    height: `${badgeHeight}px`,
+    width: 'auto',
+    display: 'block',
+  };
+
   return (
     <div className={`flex flex-row flex-wrap items-center gap-3 ${className}`}>
-      {/* App Store Badge */}
       <a
         href={APP_STORE_URL}
         target="_blank"
         rel="noopener noreferrer"
         className="hover:opacity-80 transition-opacity flex-shrink-0"
       >
-        <img
-          src={appStoreBadge}
-          alt="Download on the App Store"
-          style={{ height: `${badgeHeight}px`, width: 'auto', display: 'block' }}
-        />
+        <img src={appStoreBadge} alt="Download on the App Store" style={imgStyle} />
       </a>
 
-      {/* Google Play Badge */}
       <a
         href={GOOGLE_PLAY_URL}
         target="_blank"
         rel="noopener noreferrer"
         className="hover:opacity-80 transition-opacity flex-shrink-0"
       >
-        <img
-          src={googlePlayBadge}
-          alt="Get it on Google Play"
-          style={{ height: `${badgeHeight}px`, width: 'auto', display: 'block' }}
-        />
+        <img src={googlePlayBadge} alt="Get it on Google Play" style={imgStyle} />
       </a>
     </div>
   );
