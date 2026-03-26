@@ -15,25 +15,7 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
   size = 'default'
 }) => {
   const isSmall = size === 'small';
-  // Both badges rendered in identical containers — same height, same width
-  const height = isSmall ? 40 : 52;
-  const width = isSmall ? 128 : 160;
-
-  const containerStyle: React.CSSProperties = {
-    display: 'inline-flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: `${height}px`,
-    width: `${width}px`,
-    overflow: 'hidden',
-  };
-
-  const imgStyle: React.CSSProperties = {
-    height: '100%',
-    width: '100%',
-    objectFit: 'contain',
-    display: 'block',
-  };
+  const badgeHeight = isSmall ? 40 : 52;
 
   return (
     <div className={`flex flex-row flex-wrap items-center gap-3 ${className}`}>
@@ -42,10 +24,13 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
         href={APP_STORE_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className="hover:opacity-80 transition-opacity"
-        style={containerStyle}
+        className="hover:opacity-80 transition-opacity flex-shrink-0"
       >
-        <img src={appStoreBadge} alt="Download on the App Store" style={imgStyle} />
+        <img
+          src={appStoreBadge}
+          alt="Download on the App Store"
+          style={{ height: `${badgeHeight}px`, width: 'auto', display: 'block' }}
+        />
       </a>
 
       {/* Google Play Badge */}
@@ -53,10 +38,13 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
         href={GOOGLE_PLAY_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className="hover:opacity-80 transition-opacity"
-        style={containerStyle}
+        className="hover:opacity-80 transition-opacity flex-shrink-0"
       >
-        <img src={googlePlayBadge} alt="Get it on Google Play" style={imgStyle} />
+        <img
+          src={googlePlayBadge}
+          alt="Get it on Google Play"
+          style={{ height: `${badgeHeight}px`, width: 'auto', display: 'block' }}
+        />
       </a>
     </div>
   );
