@@ -15,38 +15,48 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
   size = 'default'
 }) => {
   const isSmall = size === 'small';
-  const badgeHeight = isSmall ? 40 : 52;
-  // GP image has ~13% built-in padding top/bottom, compensate so visual height matches
-  const gpHeight = Math.round(badgeHeight * 1.28);
+  // Both badges rendered in identical containers — same height, same width
+  const height = isSmall ? 40 : 52;
+  const width = isSmall ? 128 : 160;
+
+  const containerStyle: React.CSSProperties = {
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: `${height}px`,
+    width: `${width}px`,
+    overflow: 'hidden',
+  };
+
+  const imgStyle: React.CSSProperties = {
+    height: '100%',
+    width: '100%',
+    objectFit: 'contain',
+    display: 'block',
+  };
 
   return (
-    <div className={`flex flex-row flex-wrap items-center gap-2 ${className}`}>
+    <div className={`flex flex-row flex-wrap items-center gap-3 ${className}`}>
       {/* App Store Badge */}
       <a
         href={APP_STORE_URL}
         target="_blank"
         rel="noopener noreferrer"
         className="hover:opacity-80 transition-opacity"
+        style={containerStyle}
       >
-        <img
-          src={appStoreBadge}
-          alt="Download on the App Store"
-          style={{ height: `${badgeHeight}px`, width: 'auto', display: 'block' }}
-        />
+        <img src={appStoreBadge} alt="Download on the App Store" style={imgStyle} />
       </a>
 
-      {/* Google Play Badge — taller source to compensate for built-in whitespace */}
+      {/* Google Play Badge */}
       <a
         href={GOOGLE_PLAY_URL}
         target="_blank"
         rel="noopener noreferrer"
         className="hover:opacity-80 transition-opacity"
+        style={containerStyle}
       >
-        <img
-          src={googlePlayBadge}
-          alt="Get it on Google Play"
-          style={{ height: `${gpHeight}px`, width: 'auto', display: 'block' }}
-        />
+        <img src={googlePlayBadge} alt="Get it on Google Play" style={imgStyle} />
       </a>
     </div>
   );
