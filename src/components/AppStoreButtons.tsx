@@ -1,4 +1,6 @@
 import React from 'react';
+import appStoreBadge from '@/assets/app-store-badge.png';
+import googlePlayBadge from '@/assets/google-play-badge.png';
 
 const GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?id=com.cresol.skawsh";
 const APP_STORE_URL = "https://apps.apple.com/in/app/skawsh/id6757456162";
@@ -13,19 +15,12 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
   size = 'default'
 }) => {
   const isSmall = size === 'small';
-
-  // App Store badge natural ratio: 250x83 → ~3.01:1
-  // Google Play badge has ~13% top/bottom padding baked in
-  // We fix both badges to same width and let height auto-size from natural ratio
-
-  const badgeWidth = isSmall ? 120 : 160;
-
-  // GP image is wider (646x250 natural), so we compensate by scaling it down
-  // so the inner artwork matches the App Store badge visual height
-  const gpScale = 1.28; // accounts for built-in whitespace padding ratio
+  const badgeHeight = isSmall ? 40 : 52;
+  // GP image has ~13% built-in padding top/bottom, compensate so visual height matches
+  const gpHeight = Math.round(badgeHeight * 1.28);
 
   return (
-    <div className={`flex items-center ${isSmall ? 'flex-col sm:flex-row gap-1' : 'flex-col sm:flex-row gap-2 sm:gap-3'} ${className}`}>
+    <div className={`flex flex-row flex-wrap items-center gap-2 ${className}`}>
       {/* App Store Badge */}
       <a
         href={APP_STORE_URL}
@@ -34,13 +29,13 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
         className="hover:opacity-80 transition-opacity"
       >
         <img
-          src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
+          src={appStoreBadge}
           alt="Download on the App Store"
-          style={{ width: `${badgeWidth}px`, height: 'auto', display: 'block' }}
+          style={{ height: `${badgeHeight}px`, width: 'auto', display: 'block' }}
         />
       </a>
 
-      {/* Google Play Badge — wider source image, scaled up to match visual size */}
+      {/* Google Play Badge — taller source to compensate for built-in whitespace */}
       <a
         href={GOOGLE_PLAY_URL}
         target="_blank"
@@ -48,9 +43,9 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
         className="hover:opacity-80 transition-opacity"
       >
         <img
-          src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+          src={googlePlayBadge}
           alt="Get it on Google Play"
-          style={{ width: `${Math.round(badgeWidth * gpScale)}px`, height: 'auto', display: 'block' }}
+          style={{ height: `${gpHeight}px`, width: 'auto', display: 'block' }}
         />
       </a>
     </div>
