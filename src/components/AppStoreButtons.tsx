@@ -15,12 +15,15 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
   size = 'default'
 }) => {
   const isSmall = size === 'small';
-  const badgeHeight = isSmall ? 40 : 52;
+  const badgeHeight = isSmall ? 44 : 56;
+  // Both assets share the same 3:1 canvas (1200x400) so equal height = equal width
+  const badgeWidth = badgeHeight * 3;
 
   const imgStyle: React.CSSProperties = {
     height: `${badgeHeight}px`,
-    width: 'auto',
+    width: `${badgeWidth}px`,
     display: 'block',
+    objectFit: 'contain',
   };
 
   return (
