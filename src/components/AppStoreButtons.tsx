@@ -34,7 +34,15 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
         rel="noopener noreferrer"
         className="hover:opacity-80 transition-opacity flex-shrink-0"
       >
-        <img src={appStoreBadge} alt="Download on the App Store" style={imgStyle} />
+        <img
+          src={appStoreBadge}
+          alt="Download on the App Store"
+          style={imgStyle}
+          loading="eager"
+          decoding="async"
+          width={badgeWidth}
+          height={badgeHeight}
+        />
       </a>
 
       <a
@@ -43,7 +51,15 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
         rel="noopener noreferrer"
         className="hover:opacity-80 transition-opacity flex-shrink-0"
       >
-        <img src={googlePlayBadge} alt="Get it on Google Play" style={imgStyle} />
+        <img
+          src={googlePlayBadge}
+          alt="Get it on Google Play"
+          style={imgStyle}
+          loading="eager"
+          decoding="async"
+          width={badgeWidth}
+          height={badgeHeight}
+        />
       </a>
     </div>
   );
