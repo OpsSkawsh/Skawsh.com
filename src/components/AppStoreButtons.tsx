@@ -15,12 +15,15 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
   size = 'default'
 }) => {
   const isSmall = size === 'small';
-  const badgeHeight = isSmall ? 40 : 52;
+  const badgeHeight = isSmall ? 44 : 56;
+  // Both assets share the same 3:1 canvas (1200x400) so equal height = equal width
+  const badgeWidth = badgeHeight * 3;
 
   const imgStyle: React.CSSProperties = {
     height: `${badgeHeight}px`,
-    width: 'auto',
+    width: `${badgeWidth}px`,
     display: 'block',
+    objectFit: 'contain',
   };
 
   return (
@@ -31,7 +34,15 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
         rel="noopener noreferrer"
         className="hover:opacity-80 transition-opacity flex-shrink-0"
       >
-        <img src={appStoreBadge} alt="Download on the App Store" style={imgStyle} />
+        <img
+          src={appStoreBadge}
+          alt="Download on the App Store"
+          style={imgStyle}
+          loading="eager"
+          decoding="async"
+          width={badgeWidth}
+          height={badgeHeight}
+        />
       </a>
 
       <a
@@ -40,7 +51,15 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
         rel="noopener noreferrer"
         className="hover:opacity-80 transition-opacity flex-shrink-0"
       >
-        <img src={googlePlayBadge} alt="Get it on Google Play" style={imgStyle} />
+        <img
+          src={googlePlayBadge}
+          alt="Get it on Google Play"
+          style={imgStyle}
+          loading="eager"
+          decoding="async"
+          width={badgeWidth}
+          height={badgeHeight}
+        />
       </a>
     </div>
   );
