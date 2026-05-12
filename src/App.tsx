@@ -13,6 +13,7 @@ import Support from "./pages/Support";
 import Drivers from "./pages/Drivers";
 import DriverPrivacyPolicy from "./pages/DriverPrivacyPolicy";
 import DriverTermsConditions from "./pages/DriverTermsConditions";
+import Download from "./pages/Download"; 
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,7 +35,7 @@ const App = () => (
           <Route path="/drivers" element={<Drivers />} />
           <Route path="/drivers/privacy-policy" element={<DriverPrivacyPolicy />} />
           <Route path="/drivers/terms-conditions" element={<DriverTermsConditions />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/download" element={<Download />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
