@@ -107,6 +107,28 @@ const Footer = () => {
                   Twitter / X
                 </a>
               </li>
+              <li>
+                <a
+                  href="https://www.reddit.com/user/Skawshofficial/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors text-sm md:text-base"
+                >
+                  <ExternalLink size={16} />
+                  Reddit
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.youtube.com/@Skawsh"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors text-sm md:text-base"
+                >
+                  <Youtube size={16} />
+                  YouTube
+                </a>
+              </li>
             </ul>
           </div>
         </div>
