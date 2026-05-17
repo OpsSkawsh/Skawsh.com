@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, Zap, Shield, DollarSign } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { AppStoreButtons } from "@/components/AppStoreButtons";
+import { SEO } from "@/components/SEO";
 
 const Business = () => {
   const navigate = useNavigate();
@@ -17,6 +18,11 @@ const Business = () => {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <SEO
+        title="Partner With Skawsh — Grow Your Laundry Business"
+        description="Join Skawsh as a partner studio. Fill capacity, reach more customers, and run your laundry business with our platform."
+        path="/business"
+      />
       {/* Header */}
       <header className="p-6">
         <Button
