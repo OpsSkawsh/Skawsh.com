@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { AppStoreButtons } from "@/components/AppStoreButtons";
+import { SEO } from "@/components/SEO";
 
 const Customer = () => {
   const navigate = useNavigate();
@@ -17,6 +18,11 @@ const Customer = () => {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <SEO
+        title="Download Skawsh for Customers — iOS & Android"
+        description="Get the Skawsh app on iPhone or Android to schedule laundry pickup and delivery from trusted local studios."
+        path="/customer"
+      />
       {/* Header */}
       <header className="p-6">
         <Button

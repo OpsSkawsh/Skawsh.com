@@ -8,6 +8,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Footer from "@/components/Footer";
+import { SEO } from "@/components/SEO";
 
 const Support = () => {
   const navigate = useNavigate();
@@ -66,8 +67,24 @@ const Support = () => {
     }
   ];
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <SEO
+        title="Skawsh Support — Help with Orders, Payments & Service"
+        description="Contact Skawsh support or browse FAQs about pickup, delivery, refunds, account issues, and laundry service quality."
+        path="/support"
+        jsonLd={faqSchema}
+      />
       {/* Header */}
       <div className="bg-skawsh-blue text-primary-foreground py-8 md:py-12">
         <div className="max-w-4xl mx-auto px-4 md:px-6">

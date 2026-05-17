@@ -1,3 +1,5 @@
+import { SEO } from "@/components/SEO";
+
 const Download = () => {
   const ua = navigator.userAgent || navigator.vendor;
 
@@ -11,6 +13,11 @@ const Download = () => {
 
   return (
     <div style={{ textAlign: "center", marginTop: "100px", fontFamily: "Arial" }}>
+      <SEO
+        title="Download the Skawsh App — iOS & Android"
+        description="You're being redirected to the Skawsh app on the App Store or Google Play."
+        path="/download"
+      />
       <h2>Redirecting you to download Skawsh...</h2>
       <p>If not redirected, <a href="https://www.skawsh.com">click here</a></p>
     </div>

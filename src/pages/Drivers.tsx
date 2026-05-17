@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { ArrowLeft, FileText, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { SEO } from "@/components/SEO";
 
 const Drivers = () => {
   const navigate = useNavigate();
@@ -15,6 +16,11 @@ const Drivers = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Skawsh Driver Portal — Legal Documents"
+        description="Access privacy policy and terms & conditions for the Skawsh Driver app."
+        path="/drivers"
+      />
       <div className="bg-skawsh-blue text-white py-8 md:py-12">
         <div className="max-w-4xl mx-auto px-4 md:px-6">
           <button 

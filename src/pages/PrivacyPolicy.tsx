@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { SEO } from "@/components/SEO";
 
 const PrivacyPolicy = () => {
   const navigate = useNavigate();
@@ -16,6 +17,11 @@ const PrivacyPolicy = () => {
   
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Privacy Policy — Skawsh"
+        description="Learn how Skawsh collects, uses, and protects your personal information when you use our laundry pickup and delivery service."
+        path="/privacy-policy"
+      />
       <div className="bg-skawsh-blue text-white py-8 md:py-12">
         <div className="max-w-4xl mx-auto px-4 md:px-6">
           <button 
