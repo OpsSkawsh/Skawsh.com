@@ -1,0 +1,19 @@
+# Skawsh
+
+> Skawsh connects customers with trusted local laundry studios for pickup, wash, and delivery. Orders are placed through the Skawsh mobile app (iOS & Android).
+
+## Pages
+
+- [Home](/): Overview of Skawsh, how it works, and why to choose us.
+- [For Customers](/customer): Download the Skawsh app to schedule pickup and delivery.
+- [For Businesses](/business): Partner with Skawsh as a laundry studio.
+- [Support](/support): FAQs and contact details for help with orders, payments, and service quality.
+- [Download](/download): Smart redirect to the App Store or Google Play.
+- [Privacy Policy](/privacy-policy): How Skawsh collects and protects user data.
+- [Terms & Conditions](/terms-conditions): Terms governing use of Skawsh services.
+
+## Drivers
+
+- [Driver Portal](/drivers): Legal documents for Skawsh drivers.
+- [Driver Privacy Policy](/drivers/privacy-policy): Privacy policy for the Skawsh Driver app.
+- [Driver Terms & Conditions](/drivers/terms-conditions): Terms for the Skawsh Driver app.
