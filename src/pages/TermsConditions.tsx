@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { SEO } from "@/components/SEO";
 
 const TermsConditions = () => {
   const navigate = useNavigate();
@@ -16,6 +17,11 @@ const TermsConditions = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Terms & Conditions — Skawsh"
+        description="Read the terms and conditions that govern your use of Skawsh's laundry and dry cleaning services."
+        path="/terms-conditions"
+      />
       <div className="bg-skawsh-blue text-white py-8 md:py-12">
         <div className="max-w-4xl mx-auto px-4 md:px-6">
           <button 
