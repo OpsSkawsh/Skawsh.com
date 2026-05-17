@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { AppStoreButtons } from "@/components/AppStoreButtons";
-import { Instagram, Linkedin, Twitter } from "lucide-react";
+import { ExternalLink, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 
 const Footer = () => {
   return (
