@@ -3,7 +3,7 @@ import appStoreBadge from '@/assets/app-store-badge.png';
 import googlePlayBadge from '@/assets/google-play-badge.png';
 
 const GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?id=com.skawsh.user";
-const APP_STORE_URL = "https://apps.apple.com/in/app/skawsh/id6757456162";
+const APP_STORE_URL = "https://apps.apple.com/in/app/skawsh/id6771059253";
 
 interface AppStoreButtonsProps {
   className?: string;
