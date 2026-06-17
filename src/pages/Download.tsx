@@ -4,7 +4,7 @@ const Download = () => {
   const ua = navigator.userAgent || navigator.vendor;
 
   if (/iPad|iPhone|iPod/.test(ua)) {
-    window.location.href = "https://apps.apple.com/in/app/skawsh/id6757456162";
+    window.location.href = "https://apps.apple.com/in/app/skawsh/id6771059253";
   } else if (/android/i.test(ua)) {
     window.location.href = "https://play.google.com/store/apps/details?id=com.skawsh.user";
   } else {
