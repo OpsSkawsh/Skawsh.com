@@ -1,11 +1,15 @@
 # Skawsh
 
-> Skawsh connects customers with trusted local laundry studios for pickup, wash, and delivery. Orders are placed through the Skawsh mobile app (iOS & Android).
+> Skawsh provides laundry and dry cleaning near you in Hyderabad — pickup, wash, dry clean, and delivery from trusted local studios. Orders are placed through the Skawsh mobile app (iOS & Android).
+
+## Service areas (Hyderabad)
+
+Shekpet, Manikonda, TNGO Colony, Raidurg, Gachibowli, Wipro Circle, Kothaguda.
 
 ## Pages
 
-- [Home](/): Overview of Skawsh, how it works, and why to choose us.
-- [For Customers](/customer): Download the Skawsh app to schedule pickup and delivery.
+- [Home](/): Overview of Skawsh laundry & dry cleaning services, how it works, and service areas.
+- [For Customers](/customer): Download the Skawsh app to schedule laundry and dry cleaning pickup & delivery.
 - [For Businesses](/business): Partner with Skawsh as a laundry studio.
 - [Support](/support): FAQs and contact details for help with orders, payments, and service quality.
 - [Download](/download): Smart redirect to the App Store or Google Play.

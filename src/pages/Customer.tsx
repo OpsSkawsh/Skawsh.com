@@ -19,10 +19,12 @@ const Customer = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SEO
-        title="Download Skawsh for Customers — iOS & Android"
-        description="Get the Skawsh app on iPhone or Android to schedule laundry pickup and delivery from trusted local studios."
+        title="Laundry & Dry Cleaning Pickup Near You — Download Skawsh"
+        description="Get the Skawsh app on iPhone or Android for laundry and dry cleaning pickup & delivery from trusted studios near you in Hyderabad."
         path="/customer"
+        keywords="laundry near me, dry cleaners near me, laundry pickup and delivery, Skawsh app"
       />
+
       {/* Header */}
       <header className="p-6">
         <Button
