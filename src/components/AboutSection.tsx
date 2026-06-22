@@ -6,10 +6,11 @@ const AboutSection = () => {
           About Skawsh
         </h2>
         <p className="text-base md:text-lg text-skawsh-gray leading-relaxed max-w-3xl mx-auto">
-          Skawsh is your trusted laundry services platform. We are not a laundry studio — we connect you with 
-          the best local providers. Our mission is simple: make laundry stress-free, essential, and part of 
-          everyday life.
+          Skawsh is your trusted platform for laundry and dry cleaning near you in Hyderabad. We are not a laundry studio —
+          we connect you with the best local providers for wash, dry cleaning, and steam ironing. Our mission is simple:
+          make laundry stress-free, essential, and part of everyday life.
         </p>
+
       </div>
     </section>
   );

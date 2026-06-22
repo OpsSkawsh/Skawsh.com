@@ -2,21 +2,51 @@ import HeroSection from "@/components/HeroSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import WhyChooseSection from "@/components/WhyChooseSection";
 import AboutSection from "@/components/AboutSection";
+import ServiceAreas from "@/components/ServiceAreas";
 import Footer from "@/components/Footer";
 import { SEO } from "@/components/SEO";
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  additionalType: "https://schema.org/LaundryService",
+  name: "Skawsh",
+  url: "https://vision-to-web-pro-86.lovable.app",
+  telephone: "+917993631199",
+  email: "contact@skawsh.com",
+  priceRange: "₹₹",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Hyderabad",
+    addressRegion: "Telangana",
+    addressCountry: "IN",
+  },
+  areaServed: [
+    "Shekpet",
+    "Manikonda",
+    "TNGO Colony",
+    "Raidurg",
+    "Gachibowli",
+    "Wipro Circle",
+    "Kothaguda",
+  ].map((name) => ({ "@type": "Place", name })),
+};
 
 const Index = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Skawsh — On-demand Laundry & Dry Cleaning App"
-        description="Skip the laundry chore. Skawsh connects you with trusted local studios for pickup, wash, and delivery — all through our mobile app."
+        title="Skawsh — Laundry & Dry Cleaners Near Me | Hyderabad Pickup & Delivery"
+        description="Looking for laundry or dry cleaners near you? Skawsh connects Hyderabad customers with trusted local studios — pickup, wash, dry clean & delivery via our mobile app."
         path="/"
+        keywords="laundry near me, dry cleaners near me, laundry service Hyderabad, dry cleaning Hyderabad, laundry pickup and delivery, Gachibowli, Manikonda, Raidurg, Kothaguda"
+        jsonLd={localBusinessSchema}
       />
       <HeroSection />
       <HowItWorksSection />
       <WhyChooseSection />
       <AboutSection />
+      <ServiceAreas />
       <Footer />
     </div>
   );

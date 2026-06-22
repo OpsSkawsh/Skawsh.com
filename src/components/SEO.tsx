@@ -8,15 +8,17 @@ interface SEOProps {
   path: string;
   jsonLd?: object | object[];
   ogType?: string;
+  keywords?: string;
 }
 
-export const SEO = ({ title, description, path, jsonLd, ogType = "website" }: SEOProps) => {
+export const SEO = ({ title, description, path, jsonLd, ogType = "website", keywords }: SEOProps) => {
   const url = `${SITE_URL}${path}`;
   const schemas = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
   return (
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
+      {keywords && <meta name="keywords" content={keywords} />}
       <link rel="canonical" href={url} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
@@ -30,5 +32,6 @@ export const SEO = ({ title, description, path, jsonLd, ogType = "website" }: SE
     </Helmet>
   );
 };
+
 
 export default SEO;
