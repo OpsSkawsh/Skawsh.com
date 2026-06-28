@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 
-const SITE_URL = "https://vision-to-web-pro-86.lovable.app";
+const SITE_URL = "https://skawsh.com";
 
 interface SEOProps {
   title: string;
