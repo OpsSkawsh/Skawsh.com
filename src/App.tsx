@@ -14,6 +14,7 @@ import Drivers from "./pages/Drivers";
 import DriverPrivacyPolicy from "./pages/DriverPrivacyPolicy";
 import DriverTermsConditions from "./pages/DriverTermsConditions";
 import Download from "./pages/Download"; 
+import LaundryHyderabad from "./pages/LaundryHyderabad";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -36,6 +37,7 @@ const App = () => (
           <Route path="/drivers/privacy-policy" element={<DriverPrivacyPolicy />} />
           <Route path="/drivers/terms-conditions" element={<DriverTermsConditions />} />
           <Route path="/download" element={<Download />} />
+          <Route path="/laundry-hyderabad" element={<LaundryHyderabad />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
