@@ -8,7 +8,7 @@ const HeroSection = () => {
     <section className="bg-skawsh-blue text-white min-h-screen flex items-center justify-center px-4 py-12 overflow-hidden">
       <div className="text-center max-w-4xl mx-auto w-full">
         <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 leading-tight">
-          <span className="block sm:whitespace-nowrap">Laundry Isn't an Extra. It's Essential</span>
+          <span className="block sm:whitespace-nowrap">Laundry Pickup in Minutes. Delivered Fresh to Your Door.</span>
         </h1>
         <h2 className="text-xl sm:text-2xl md:text-3xl mb-4 md:mb-6 font-medium opacity-90">
           Because Fresh Clothes Shouldn't Be a Luxury.
