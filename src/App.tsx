@@ -14,6 +14,7 @@ import Drivers from "./pages/Drivers";
 import DriverPrivacyPolicy from "./pages/DriverPrivacyPolicy";
 import DriverTermsConditions from "./pages/DriverTermsConditions";
 import Download from "./pages/Download"; 
+import LaundryHyderabad from "./pages/LaundryHyderabad";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
