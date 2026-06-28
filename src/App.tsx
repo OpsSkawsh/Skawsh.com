@@ -37,6 +37,7 @@ const App = () => (
           <Route path="/drivers/privacy-policy" element={<DriverPrivacyPolicy />} />
           <Route path="/drivers/terms-conditions" element={<DriverTermsConditions />} />
           <Route path="/download" element={<Download />} />
+          <Route path="/laundry-hyderabad" element={<LaundryHyderabad />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
