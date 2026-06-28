@@ -11,7 +11,7 @@ const localBusinessSchema = {
   "@type": "LocalBusiness",
   additionalType: "https://schema.org/LaundryService",
   name: "Skawsh",
-  url: "https://vision-to-web-pro-86.lovable.app",
+  url: "https://skawsh.com",
   telephone: "+917993631199",
   email: "contact@skawsh.com",
   priceRange: "₹₹",
