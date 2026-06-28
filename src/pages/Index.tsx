@@ -22,13 +22,14 @@ const localBusinessSchema = {
     addressCountry: "IN",
   },
   areaServed: [
-    "Shekpet",
+    "Shaikpet",
     "Manikonda",
     "TNGO Colony",
     "Raidurg",
     "Gachibowli",
     "Wipro Circle",
     "Kothaguda",
+    "Kondapur",
   ].map((name) => ({ "@type": "Place", name })),
 };
 
