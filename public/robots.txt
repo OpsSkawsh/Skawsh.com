@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://vision-to-web-pro-86.lovable.app/sitemap.xml
+Sitemap: https://www.skawsh.com/sitemap.xml
