@@ -10,10 +10,7 @@ const HeroSection = () => {
         <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 leading-tight">
           <span className="block sm:whitespace-nowrap">Laundry Pickup in Minutes. Delivered Fresh to Your Door.</span>
         </h1>
-        <h2 className="text-xl sm:text-2xl md:text-3xl mb-4 md:mb-6 font-medium opacity-90">
-          Because Fresh Clothes Shouldn't Be a Luxury.
-        </h2>
-        <p className="text-sm sm:text-base md:text-lg mb-4 md:mb-6 opacity-80 max-w-3xl mx-auto">
+        <p className="text-sm sm:text-base md:text-lg mb-6 md:mb-8 opacity-80 max-w-3xl mx-auto">
           Laundry and dry cleaning near you in Hyderabad — pickup & delivery booked in seconds via the Skawsh app.
         </p>
         <p className="text-base sm:text-lg md:text-xl mb-8 md:mb-10 opacity-80 max-w-3xl mx-auto">
