@@ -8,7 +8,8 @@ const HeroSection = () => {
     <section className="bg-skawsh-blue text-white min-h-screen flex items-center justify-center px-4 py-12 overflow-hidden">
       <div className="text-center max-w-4xl mx-auto w-full">
         <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 leading-tight">
-          <span className="block sm:whitespace-nowrap">Laundry Pickup in Minutes. Delivered Fresh to Your Door.</span>
+          <span className="block">Laundry Pickup in Minutes.</span>
+          <span className="block">Delivered Fresh to Your Door.</span>
         </h1>
         <p className="text-sm sm:text-base md:text-lg mb-6 md:mb-8 opacity-80 max-w-3xl mx-auto">
           Laundry and dry cleaning near you in Hyderabad — pickup & delivery booked in seconds via the Skawsh app.
@@ -16,10 +17,8 @@ const HeroSection = () => {
         <p className="text-base sm:text-lg md:text-xl mb-8 md:mb-10 opacity-80 max-w-3xl mx-auto">
           Turn laundry from a burden into freedom. Skawsh makes your clothes fresh, clean, and ready — while you focus on what really matters.
         </p>
-
         <p className="text-sm opacity-80 mb-3">Download the Skawsh app</p>
         <AppStoreButtons className="justify-center items-center mb-10 md:mb-12" />
-
         <div className="max-w-3xl mx-auto">
           <p className="text-sm opacity-80 mb-3">We are currently available in</p>
           <div
