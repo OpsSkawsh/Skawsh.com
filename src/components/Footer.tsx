@@ -76,7 +76,7 @@ const Footer = () => {
             <ul className="space-y-2 md:space-y-3">
               <li>
                 <a
-                  href="https://www.instagram.com/skawshofficial/"
+                  href="https://www.instagram.com/skawsh_official/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors text-sm md:text-base"
